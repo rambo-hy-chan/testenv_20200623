@@ -1,6 +1,7 @@
 FROM ubuntu:bionic
 
-RUN apt-get update && \ apt-get -y install httpd \ 
+RUN apt-get update -y 
+RUN apt-get -y install httpd 
 
 RUN systemctl start httpd
 
