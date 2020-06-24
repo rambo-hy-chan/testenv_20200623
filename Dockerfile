@@ -3,7 +3,7 @@ FROM ubuntu:bionic
 RUN apt-get update -y 
 RUN apt-get -y install nginx 
 
-RUN systemctl start nginx
+RUN sudo /etc/init.d/nginx restart
 
 RUN useradd test
 RUN passwd test123
