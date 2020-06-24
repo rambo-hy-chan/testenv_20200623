@@ -1,9 +1,9 @@
 FROM ubuntu:bionic
 
 RUN apt-get update -y 
-RUN apt-get -y install httpd 
+RUN apt-get -y install nginx 
 
-RUN systemctl start httpd
+RUN systemctl start nginx
 
 RUN useradd test
 RUN passwd test123
