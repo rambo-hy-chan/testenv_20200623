@@ -1,4 +1,6 @@
 FROM ubuntu:bionic
-COPY startup.sh /tmp/
-RUN chmod +x /tmp/startup.sh
-ENTRYPOINT ["/tmp/startup.sh"]
+
+RUN apt-get install update -y
+RUN apt-get install nginx -y
+RUN echo " hello world docker " > /var/www/html/index.html
+RUN /etc/init.d/nginx start
